@@ -13,33 +13,24 @@
  - Create & Reply Functionality
  
  ### Comments Partial View
+I created the partial view "_Comment" that represents individual comments.  It includes data attributes (commentPath and commentID) s
 I created a partial view named "_Comments" that can be used to display an ordered-by-date list of all comments in the database on any page.
  
  ### Like/Dislike Implementation
  I added two methods to the Comments controller, one for adding likes and one for dislikes to comments. I created 
-an ajax method for the like and dislike buttons that is called when the button is pushed that works with the controller 
-methods to asynchronously add a like or dislike to each comment when the button is pushed and display the updated 
+an ajax method for the like and dislike buttons that is called when the button is clicked that works with the controller 
+methods to asynchronously add a like or dislike to each comment when the button is clicked and display the updated 
 number of total likes or dislikes in the view.
  
  ### Like/Dislike Ratio Bar
  I added a bootstrap progress bar to the comments to reflect the percentage of likes each comment has. I altered the 
 comments controller methods AddLike() and AddDislike() so that each returns a Json object containing the comment's likes 
-(or dislikes) and the like ratio. I changed the ajax methods so that each time a comment is liked or disliked the progress
+(or dislikes) and the like ratio. I updated the Ajax methods so that each time a comment is liked or disliked the progress
  bar displays that change.
  
  ### Delete Button, Modal, Confirmation
- -Instead of takin User to Delete page, have delete button open confirmation modal
--Ask user if they are sure they want to delete this comment
--Modal should have a confirm button and a cancel button
--Clicking confirm button should:
-	-delete comment without reloading the page(ajax)
-	-hide deleted comment on page
-	-display fixed message at top of page that says "comment was deleted successfully" if comment was.
--popup message when comment is delted should have green theme and font-awesome checkmark at the end
--popup message should ppear and stay on screen for 3 seconds then fade out and disappear
+I added an event listener to the trashcan icon on each comment so that it opens a confirm delte modal when clicked instead of routing the user to another page.  When the user clicks the confirm delete button in the modal, the comment's height is reduced until it disappears, the comment is deleted from the database, and a green delete confirmation badge is displayed for three seconds.
 
-Changed comment delete button so that it opens a confirm delete modal with confirm and cancel buttons instead of routing to another page. 
- Created an ajax method that deletes the comment, removes it from the page, and displays a green confirmation for 3 seconds.
  
  ### Create & Reply Functionality
  -add implementation for user to create and reply to comments w/out navigating to another page.
