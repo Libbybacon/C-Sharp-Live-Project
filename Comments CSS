@@ -1,0 +1,53 @@
+.comment-btn {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+ 
+}
+
+.comment-del-btn {
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
+.progress {
+    height: 1vh;
+    width: 20%;
+    color: green;
+    background-color: red;
+}
+
+.successBadge {
+    width: 50%;
+    font-size: 1.1rem;
+    text-align:center;
+    background-color: #91f273;
+    color: #268d06;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.hiddenComment {
+    display: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.cancelCommentBtn:hover {
+    color: red;
+}
+
+.newCommentBtn {
+    border-color: gray;
+}
+.newCommentBtn:hover {
+    background-color: var(--secondary-color--dark);
+    color: white;
+}
+
+.replyComments {
+    padding-left:3em;
+}
