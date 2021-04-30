@@ -9,50 +9,25 @@
  - Like/Dislike Ratio Bar
  - Delete Button, Modal, Confirmation
  - Create & Reply Functionality
-
-CREATE COMMENT MODEL & CRUD PAGES
-
-Created a Comment model in the blog area
-Added that model db set to ApplicationDbContext definition in IdentityModels
-Created controller and scaffolded CRUD pages for the Comment model
-Removed Likes, Dislikes & CommentDate from Create and Edit views
-Changed css for some buttons and text to make it more readable for user
-
-IMPLEMENTING COMMENT FEATURES PT 1: COMMENTS PARTIAL VIEW
-Created partial view in the Comments View folder for displaying Comments named "_Comments" that can be used on other pages
+ 
+ ### Comments Partial View
+ Created partial view in the Comments View folder for displaying Comments named "_Comments" that can be used on other pages
 Replaced table in Comments Index page with a method that calls the _Comments partial view
-
-IMPLEMENTING COMMENT FEATURES PT 2: STYLING THE COMMENTS
-Reformatted comment display to include comment's author, time since comment was posted and the user's message.  
-Added like and dislike buttons and display the number of each.
-Added reply button
-Added trashcan button
-
-
-IMPLEMENTING COMMENT FEATURES PT 3: LIKE/DISLIKE IMPLEMENTATION
-when user clicks like button, increment like property of that comment by 1
-when user clicks dislike button, increment dislike property of that comment by 1
-use Ajax to asynchronously update properties so page doesn't reload when like or dislike button is clicked
-
-I added two methods to the Comments controller, one for adding likes and one for dislikes to comments. I created 
+ 
+ ### Like/Dislike Implementation
+ I added two methods to the Comments controller, one for adding likes and one for dislikes to comments. I created 
 an ajax method for the like and dislike buttons that is called when the button is pushed that works with the controller 
 methods to asynchronously add a like or dislike to each comment when the button is pushed and display the updated 
 number of total likes or dislikes in the view.
-
-IMPLEMENTING COMMENT FEATURES PT 4: LIKE/DISLIKE RATIO BAR
--create bootstrap progress bar below like and dislike buttons for each comment as visual representation of percent of likes/dislikes
--use LikeRatio() method to get % of likes that comment received
--use that number to dynamically fill in progress bar
--use Ajax to update progress bar when comment is liked or disliked
-
-I added a bootstrap progress bar to the comments to reflect the percentage of likes each comment has. I altered the 
+ 
+ ### Like/Dislike Ratio Bar
+ I added a bootstrap progress bar to the comments to reflect the percentage of likes each comment has. I altered the 
 comments controller methods AddLike() and AddDislike() so that each returns a Json object containing the comment's likes 
 (or dislikes) and the like ratio. I changed the ajax methods so that each time a comment is liked or disliked the progress
  bar displays that change.
-
-
-IMPLEMENTING COMMENT FEATURES PT 5: DELETE BUTTON
--Instead of takin User to Delete page, have delete button open confirmation modal
+ 
+ ### Delete Button, Modal, Confirmation
+ -Instead of takin User to Delete page, have delete button open confirmation modal
 -Ask user if they are sure they want to delete this comment
 -Modal should have a confirm button and a cancel button
 -Clicking confirm button should:
@@ -64,10 +39,9 @@ IMPLEMENTING COMMENT FEATURES PT 5: DELETE BUTTON
 
 Changed comment delete button so that it opens a confirm delete modal with confirm and cancel buttons instead of routing to another page. 
  Created an ajax method that deletes the comment, removes it from the page, and displays a green confirmation for 3 seconds.
-
-
-IMPLEMENTING COMMENT FEATURES PT 6: CREATE & REPLY FUNCTIONALITY
--add implementation for user to create and reply to comments w/out navigating to another page.
+ 
+ ### Create & Reply Functionality
+ -add implementation for user to create and reply to comments w/out navigating to another page.
 -replace Create New link w/ short form that let's user type message
 -Clicking reply button for comment brings up that form directly below that comment
 -sort comments in _comments partial view so most recent comments appear first
@@ -94,3 +68,27 @@ I used Jquery Ajax to create methods that are functional without refreshing the 
 -Reply button - displays form below comment who's reply button user has clicked
 -Cancel button in reply form - hides reply form
 -Reply comment submit button - creates new comment, displays new comment at top of list, hides reply form
+ 
+ ## Front End Stories
+
+CREATE COMMENT MODEL & CRUD PAGES
+
+Created a Comment model in the blog area
+Added that model db set to ApplicationDbContext definition in IdentityModels
+Created controller and scaffolded CRUD pages for the Comment model
+Removed Likes, Dislikes & CommentDate from Create and Edit views
+Changed css for some buttons and text to make it more readable for user
+
+
+IMPLEMENTING COMMENT FEATURES PT 2: STYLING THE COMMENTS
+Reformatted comment display to include comment's author, time since comment was posted and the user's message.  
+Added like and dislike buttons and display the number of each.
+Added reply button
+Added trashcan button
+
+
+
+
+
+
+
