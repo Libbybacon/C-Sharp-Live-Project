@@ -1,6 +1,7 @@
-![Comments - My ASP NET Application](https://user-images.githubusercontent.com/56324316/116736762-4fa49a80-a9be-11eb-8814-130c2b0d98a4.gif)
-f# C-Sharp-Live-Project
+# C# Live Project
 
+![Comments - My ASP NET Application](https://user-images.githubusercontent.com/56324316/116736762-4fa49a80-a9be-11eb-8814-130c2b0d98a4.gif)
+ 
 ## Introduction
  During my final two weeks at the Tech Academy, I worked with my peers within an Agile Framework to help create an MVC web application for a Portland-based theater company using Visual Studio, C# and the .NET Framework.  I had the option to select one of three areas of focus at the beginning of our two week sprint, and I chose to tackle the Comments page because I hoped to focus more on back end logic versus front end design.  Over those two weeks I was assigned several stories that tasked me with adding asynchronous functionality to various aspects of the comments.  I had almost no experience working with jQuery or Ajax before this project, but I learned an incredible amount in a very short time and I am very pleased with the results.
  
