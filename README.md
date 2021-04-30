@@ -11,8 +11,7 @@
  - Create & Reply Functionality
  
  ### Comments Partial View
- Created partial view in the Comments View folder for displaying Comments named "_Comments" that can be used on other pages
-Replaced table in Comments Index page with a method that calls the _Comments partial view
+I created a partial view named "_Comments" that can be used to display an ordered-by-date list of all comments in the database on any page.
  
  ### Like/Dislike Implementation
  I added two methods to the Comments controller, one for adding likes and one for dislikes to comments. I created 
