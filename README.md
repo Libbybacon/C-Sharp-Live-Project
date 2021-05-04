@@ -52,14 +52,14 @@ make create method in controller void
 I replaced the 'Create new comment' action link with a form above the list of comments where users can enter text and submit it to create a new comment that appears at the top of the list.
 I created a partial view for individual comments
 I used Jquery Ajax to create methods that are functional without refreshing the page first for:
- -Comment button - creates a new comment, adds that comment to the page and erases the text in the  
+- Comment button - creates a new comment, adds that comment to the page and erases the text in the  
    input field
--Like button - changes number of likes next to the like button and adjusts the like/dislike ratio bar
--Dislike button -changes number of dislikes next to the dislike button and adjusts the like/dislike ratio bar
--Trashcan icon button - brings up delete confirmation modal
--Reply button - displays form below comment who's reply button user has clicked
--Cancel button in reply form - hides reply form
--Reply comment submit button - creates new comment, displays new comment at top of list, hides reply form
+- Like button - changes number of likes next to the like button and adjusts the like/dislike ratio bar
+- Dislike button -changes number of dislikes next to the dislike button and adjusts the like/dislike ratio bar
+- Trashcan icon button - brings up delete confirmation modal
+- Reply button - displays form below comment who's reply button user has clicked
+- Cancel button in reply form - hides reply form
+- Reply comment submit button - creates new comment, displays new comment at top of list, hides reply form
  
  ## Front End Stories
 
