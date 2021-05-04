@@ -33,25 +33,9 @@ I added an event listener to the trashcan icon on each comment so that it opens 
 
  
  ### Create & Reply Functionality
- -add implementation for user to create and reply to comments w/out navigating to another page.
--replace Create New link w/ short form that let's user type message
--Clicking reply button for comment brings up that form directly below that comment
--sort comments in _comments partial view so most recent comments appear first
--creating new comment should not refresh page
--use ajax to add new comment to page when new comment or reply comment is created
-
-make create method in controller void
-
--Added form with a text input above the list of comments where users can add a new comment.
--Added Ajax function to newComment button that creates a new comment and deletes the text from the input box (doesn't refresh list though).
--Added function to cancel button that clears text from input box.
--Changed the return in the Index method in the comments controller to a list of comments sorted in descending order by comment date, 
- so most recent comments appear first
--Created partial view _Comment for individual comments
-
 I replaced the 'Create new comment' action link with a form above the list of comments where users can enter text and submit it to create a new comment that appears at the top of the list.
 I created a partial view for individual comments
-I used Jquery Ajax to create methods that are functional without refreshing the page first for:
+I used jQuery Ajax to create methods that are functional without refreshing the page first for:
 - Comment button - creates a new comment, adds that comment to the page and erases the text in the  
    input field
 - Like button - changes number of likes next to the like button and adjusts the like/dislike ratio bar
