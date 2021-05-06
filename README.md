@@ -44,23 +44,46 @@ I used jQuery Ajax to create methods that are functional without refreshing the 
 - Reply button - displays form below comment who's reply button user has clicked
 - Cancel button in reply form - hides reply form
 - Reply comment submit button - creates new comment, displays new comment at top of list, hides reply form
+
+
+// New Comment Event
+const newCommentEvent = (e) => {
+    var message = $("#commentMessage").val();
+    var path = e.target.getAttribute("data-CommentPath");
+    //Sends input text to Create method in controller which creates a new comment in the Db with text input as comment Message
+    $.ajax({
+        type: "POST",
+        url: path,
+        data: { message: message },
+        success: function (result) {
+            //Replace input text with placeholder text
+            $("#commentMessage").val(null);
+            var jQueryResult = $(result);
+            // Add like
+            jQueryResult.find('.likeBtn').click(addLikeEvent);
+            // Add Dislike
+            jQueryResult.find('.dislikeBtn').click(addDislikeEvent);
+            // Click Trashcan
+            jQueryResult.find('.trashcan').click(trashcanEvent);
+            // Click Reply - show form
+            jQueryResult.find('.replyBtn').click(replyEvent);
+            // Add New Reply Comment - submit new reply comment
+            jQueryResult.find('.replySubmitBtn').click(newReplySubmitEvent);
+            // Cancel Reply - hide form
+            jQueryResult.find('.cancelReplyBtn').click(cancelReplyEvent);
+            // Add new comment to top of the list
+            $(".newComment").prepend(jQueryResult);
+        },
+        error: function (request, status, error) {
+            serviceError();
+        }
+    });
+}
+
+
  
  ## Front End Stories
-
-CREATE COMMENT MODEL & CRUD PAGES
-
-Created a Comment model in the blog area
-Added that model db set to ApplicationDbContext definition in IdentityModels
-Created controller and scaffolded CRUD pages for the Comment model
-Removed Likes, Dislikes & CommentDate from Create and Edit views
-Changed css for some buttons and text to make it more readable for user
-
-
-IMPLEMENTING COMMENT FEATURES PT 2: STYLING THE COMMENTS
-Reformatted comment display to include comment's author, time since comment was posted and the user's message.  
-Added like and dislike buttons and display the number of each.
-Added reply button
-Added trashcan button
+I added front-end design following the client's color and styling guidelines.
 
 
 
