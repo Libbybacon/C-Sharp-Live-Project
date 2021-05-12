@@ -3,9 +3,9 @@
 ![Comments - My ASP NET Application](https://user-images.githubusercontent.com/56324316/116736762-4fa49a80-a9be-11eb-8814-130c2b0d98a4.gif)
  
 ## Introduction
- During my final two weeks at the Tech Academy, I worked with my peers within an Agile Framework to help create an MVC web application for a Portland-based theater company using Visual Studio, C# and the .NET Framework.  I was tasked with creating a page where users can post, like, dislike, and reply to comments.  Each comment can also be deleted, and contains a ratio bar that displays the percentage of likes vs. dislikes.  I was assigned several stories that tasked me with adding asynchronous functionality to various aspects of the comments and I used jQuery AJAX to do so.
+ During my final two weeks at the Tech Academy, I worked with my peers within an Agile Framework to help create an MVC web application for a Portland-based theater company using Visual Studio, C# and the .NET Framework.  I was tasked with creating a page where users can post, like, dislike, and reply to comments.  Each comment can also be deleted, and contains a ratio bar that displays the percentage of likes vs. dislikes.  I was assigned several stories that required me to add asynchronous functionality to various aspects of the comments and I used jQuery AJAX to do so.
  
- ## Back End Stories
+ ## Stories
  - Comments Partial View
  - Like/Dislike Implementation
  - Like/Dislike Ratio Bar
@@ -46,7 +46,7 @@ I used jQuery Ajax to create methods that are functional without refreshing the 
 - Reply comment submit button - creates new comment, displays new comment at top of list, hides reply form
 
  
- ## Front End Stories
+ ## Front End Design
 I added front-end design following the client's color and styling guidelines.
 
 
